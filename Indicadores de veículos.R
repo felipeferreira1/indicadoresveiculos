@@ -9,18 +9,19 @@
 #PACOTES REQUERIDOS:
 #INSTALAR QUANDO NECESSÁRIO
 #EXEMPLO:install.packages("pryr")
-library(xlsx)
+#library(xlsx)
 library(RCurl)
 library(XML)
 
 #DEFINIR PASTAS DE RESULTADOS:
 getwd()
-setwd("//SRJN3/area_corporativa/Projeto GAP-DIMAC/Automatizações/Indicadores de veículos")
+setwd("C:\\Users\\User\\Documents")
 
 #ATUALIZAR DATA (alinhar com primeiro mes dos dados)
+
 data1="01/01/2013"
-data2="26/04/2019"
-data3="2019.04"
+data2 = format(Sys.time(), "%d/%m/%Y")
+data3= format(Sys.time(), "%Y.%m")
 
 #1)Pessoas Jurídicas - Recursos livres
 serie=c(20553, 20556, 20581, 20584, 20645, 20648, 20673, 20676, 20728, 20731, 20749, 20752, 20864, 20867, 20886, 20889, 20938, 20941, 20963, 20966, 21017, 21020, 21042, 21045, 21096, 21099, 21121, 21124, 25447, 25450, 25471, 25474, 27658, 27660, 27680, 27682, 27735)
@@ -71,5 +72,4 @@ names(base)=c("Data", "20553 - Saldo da carteira de crédito com recursos livres 
               "20966 - Prazo médio da carteira de crédito com recursos livres - Pessoas físicas - Arrendamento mercantil de veículos - Meses", "21017 - Percentual da carteira de crédito com recursos livres com atraso entre 15 e 90 dias - Pessoas jurídicas - Aquisição de veículos - %", "21020 - Percentual da carteira de crédito com recursos livres com atraso entre 15 e 90 dias - Pessoas jurídicas - Arrendamento mercantil de veículos - %", "21042 - Percentual da carteira de crédito com recursos livres com atraso entre 15 e 90 dias - Pessoas físicas - Aquisição de veículos - %", "21045 - Percentual da carteira de crédito com recursos livres com atraso entre 15 e 90 dias - Pessoas físicas - Arrendamento mercantil de veículos - %", "21096 - Inadimplência da carteira de crédito com recursos livres - Pessoas jurídicas - Aquisição de veículos - %", "21099 - Inadimplência da carteira de crédito com recursos livres - Pessoas jurídicas - Arrendamento mercantil de veículos - %", "21121 - Inadimplência da carteira de crédito com recursos livres - Pessoas físicas - Aquisição de veículos - %", "21124 - Inadimplência da carteira de crédito com recursos livres - Pessoas físicas - Arrendamento mercantil de veículos - %",
               "25447 - Taxa média mensal de juros das operações de crédito com recursos livres - Pessoas jurídicas - Aquisição de veículos - % a.m.", "25450 - Taxa média mensal de juros das operações de crédito com recursos livres - Pessoas jurídicas - Arrendamento mercantil de veículos - % a.m.	", "25471 - Taxa média mensal de juros das operações de crédito com recursos livres - Pessoas físicas - Aquisição de veículos - % a.m.", "25474 - Taxa média mensal de juros das operações de crédito com recursos livres - Pessoas físicas - Arrendamento mercantil de veículos - % a.m.", "27658 - Indicador de Custo do Crédito - ICC - Recursos Livres - Pessoas jurídicas - Aquisição de veículos - % a.a.", "27660 - Indicador de Custo do Crédito - ICC - Recursos Livres - Pessoas jurídicas - Arrendamento mercantil de veículos - % a.a.", "27680 - Indicador de Custo do Crédito - ICC - Recursos Livres - Pessoas físicas - Aquisição de veículos - % a.a.", "27682 - Indicador de Custo do Crédito - ICC - Recursos Livres - Pessoas físicas - Arrendamento mercantil de veículos - % a.a.", "27735 - Saldo das operações de crédito por atividade econômica - Geral - veículos automotores - R$ (milhões)")
 
-
-write.xlsx(base,"Indicadores de credito - veiculos.xlsx", row.names = F)
+write.csv2(base,"Indicadores de credito - veiculos.csv", row.names = F)
