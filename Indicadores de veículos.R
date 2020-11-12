@@ -53,5 +53,5 @@ names(base)=c("Data", "20553 - Saldo da carteira de crédito com recursos livres 
               "25447 - Taxa média mensal de juros das operações de crédito com recursos livres - Pessoas jurídicas - Aquisição de veículos - % a.m.", "25450 - Taxa média mensal de juros das operações de crédito com recursos livres - Pessoas jurídicas - Arrendamento mercantil de veículos - % a.m.	", "25471 - Taxa média mensal de juros das operações de crédito com recursos livres - Pessoas físicas - Aquisição de veículos - % a.m.", "25474 - Taxa média mensal de juros das operações de crédito com recursos livres - Pessoas físicas - Arrendamento mercantil de veículos - % a.m.", "27658 - Indicador de Custo do Crédito - ICC - Recursos Livres - Pessoas jurídicas - Aquisição de veículos - % a.a.", "27660 - Indicador de Custo do Crédito - ICC - Recursos Livres - Pessoas jurídicas - Arrendamento mercantil de veículos - % a.a.", "27680 - Indicador de Custo do Crédito - ICC - Recursos Livres - Pessoas físicas - Aquisição de veículos - % a.a.", "27682 - Indicador de Custo do Crédito - ICC - Recursos Livres - Pessoas físicas - Arrendamento mercantil de veículos - % a.a.", "27735 - Saldo das operações de crédito por atividade econômica - Geral - veículos automotores - R$ (milhões)")
 
 #Exportando séries
-write.csv2(base,"Indicadores de credito - veiculos.csv", row.names = F)
-export(base, "Indicadores de credito - veiculos.xlsx")
+write.csv2(base,"Indicadores de credito - veiculos(fonte).csv", row.names = F)
+export(base, "Indicadores de credito - veiculos(fonte).xlsx")
